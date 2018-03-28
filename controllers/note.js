@@ -1,10 +1,6 @@
-//created note schema passed in
-var Note = mongoose.model('Note', NoteSchema);
-module.exports = Note;
-//require Note.js
-var noteController = require("../models/Note.js");
-
-module.exports = noteController;
-    
-
+var note = require('../models/Note');
+var note = function(headline,summary,url){
+  return note.create({'noteText':noteText})
+}
+module.exports = note;
 

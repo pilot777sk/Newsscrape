@@ -3,8 +3,6 @@ var mongoose = require('mongoose');
 //create schema
 var Schema = mongoose.Schema;
 
-var db = require("../connection");
-
 //create note schema
 var NoteSchema = new Schema({
   noteText: {

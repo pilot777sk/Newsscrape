@@ -1,5 +1,5 @@
 # Newsscrape
-News scraper app uses cheerio.js to scrape a news site, mongodb to save news articles and comments, and express to serve the site and data.
+News scraper app uses cheerio.js to scrape a News site, mongodb to save News articles and user comments.
 NPM Packages used: express express-handlebars mongoose body-parser cheerio request.
 
 I uses Cheerio to scrape target data and Mongoose that saves it to my MongoDB database.

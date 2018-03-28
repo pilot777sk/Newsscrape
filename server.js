@@ -2,9 +2,32 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require('morgan');
 var hbs = require('express-handlebars');
-
+var mongoose = require('mongoose');
 // required routes 
-var routes = require('./routes/routes');
+//var routes = require('./routes/api');
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+// Set mongoose to leverage built in JavaScript ES6 Promises
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI,{
+  useMongoClient: true
+});
+
+
+
+var db = mongoose.connection;
+
+// mongoose errors
+db.on("error", function(error) 
+{
+  console.log("Mongoose Error: ", error);
+});
+
+//mongoose connection to db
+db.once("open", function() 
+{
+  console.log("Mongoose connection successful!");
+});
 
 // Init express
 var app = express();
@@ -27,10 +50,9 @@ app.use(bodyParser.urlencoded({
 // set the public static directory
 app.use(express.static('public'));
 
-mongoose.Promise = require('bluebird');
 
 // Import routes
-app.use('/', routes);
+//app.use('/', routes);
 
 
 

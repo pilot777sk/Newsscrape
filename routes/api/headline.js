@@ -1,0 +1,1 @@
+var newHeadline = require ('../../controllers/newHeadline');
