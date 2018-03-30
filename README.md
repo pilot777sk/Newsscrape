@@ -6,5 +6,5 @@ I uses Cheerio to scrape target data and Mongoose that saves it to my MongoDB da
 
 Users can store comments on the Articals they read or delete whatever comments they want removed. All stored comments are visible to every user. Mongoose's model system to associate comments with particular articles.
 
-Heroku link to the app: https://-x-x-x-x-x.herokuapp.com/
+Heroku link to the app: https://peaceful-ridge-86550.herokuapp.com/
 
