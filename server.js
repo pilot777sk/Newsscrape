@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 // required routes 
 //var routes = require('./routes/api');
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Headlinesdb";
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI,{
