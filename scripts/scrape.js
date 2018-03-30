@@ -14,7 +14,7 @@ var scrape = function(callback) {
 
 			var header = $(this).children(".story-heading").text().trim();
 			var summary = $(this).children(".summary").text().trim();
-			articles.push(dataToAdd)
+			articles.push(data)
 			
 		});
 		callback(articles);
